@@ -6,27 +6,31 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+spinner = TTY::Spinner.new("[:spinner] Creating Coins...")
+spinner.auto_spin
 
-puts "Creating coins..."
+coins = [
+          {
+            description: "Bitcoin",
+            acronym: "BTC",
+            url_image: "http://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png"
+          },
 
-Coin.create!(
-  description: "Bitcoin",
-  acronym: "BTC",
-  url_image: "http://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png"
+          {
+            description: "Ethereum",
+            acronym: "ETH",
+            url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png"
+          },
 
-)
+          {
+            description: "DASH",
+            acronym: "DASH",
+            url_image: "https://pngimage.net/wp-content/uploads/2018/05/dash-png-9.png"
+          }
+        ]
 
-Coin.create!(
-  description: "Ethereum",
-  acronym: "ETH",
-  url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png"
-)
+coins.each do |coin|
+    Coin.find_or_create_by!(coin)
 
-Coin.create!(
-  description: "DASH",
-  acronym: "DASH",
-  url_image: "https://pngimage.net/wp-content/uploads/2018/05/dash-png-9.png"
-
-)
-
-puts "Coins successfully created!"
+end
+spinner.success("(Done!)")
