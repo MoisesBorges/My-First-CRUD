@@ -5,8 +5,9 @@ namespace :dev do
       show_spinner("Drop the DB...") { %x(rails db:drop) }
       show_spinner("Creating DB...") { %x(rails db:create) }
       show_spinner("Migrating DB...") { %x(rails db:migrate) }
-      %x(rails dev:add_coins)
       %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)
+
     else
       puts "You aren't on development environment"
     end
@@ -19,31 +20,37 @@ namespace :dev do
                   {
                     description: "Bitcoin",
                     acronym: "BTC",
-                    url_image: "http://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png"
+                    url_image: "http://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png",
+                    mining_type: MiningType.find_by(acronym: 'PoW')
                   },
 
                   {
                     description: "Ethereum",
                     acronym: "ETH",
-                    url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png"
+                    url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png",
+                    mining_type: MiningType.all.sample
+
                   },
 
                   {
                     description: "DASH",
                     acronym: "DASH",
-                    url_image: "https://pngimage.net/wp-content/uploads/2018/05/dash-png-9.png"
+                    url_image: "https://pngimage.net/wp-content/uploads/2018/05/dash-png-9.png",
+                    mining_type: MiningType.all.sample
                   },
 
                   {
                     description: "Iota",
                     acronym: "Iota",
-                    url_image: "https://s2.coinmarketcap.com/static/img/coins/64x64/1720.png?_=cb31027"
+                    url_image: "https://s2.coinmarketcap.com/static/img/coins/64x64/1720.png?_=cb31027",
+                    mining_type: MiningType.all.sample
                   },
 
                   {
                     description: "ZCash",
                     acronym: "ZEC",
-                    url_image: "https://www.cryptocompare.com/media/351360/zec.png"
+                    url_image: "https://www.cryptocompare.com/media/351360/zec.png",
+                    mining_type: MiningType.all.sample
                   }
                 ]
 
