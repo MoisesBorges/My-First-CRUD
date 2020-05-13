@@ -1,24 +1,22 @@
-# README
+Crypto Wallet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the Crypto Wallet, an app that you can register and keep up with your cryptocoins.
 
-Things you may want to cover:
+Made with
 
-* Ruby version
+ruby 2.5.0
+Rails 5.2.4.2
+bootstrap 4.1.1
+sqlite3
 
-* System dependencies
+How to install?
 
-* Configuration
+0. bundle
+1. rails dev:setup
+2. rails db:migrate
+3. yarn add bootstrap
+4. rails s
 
-* Database creation
+Or you can see it on [heroku](https://dashboard.heroku.com/apps/shielded-anchorage-32301/activity)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Thank you my great friend Odinei[Odinei Ribeiro](https://github.com/odineiramone) for helping me a lot in this project.
