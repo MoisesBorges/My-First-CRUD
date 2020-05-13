@@ -19,4 +19,4 @@ How to install?
 
 Or you can see it on [heroku](https://dashboard.heroku.com/apps/shielded-anchorage-32301/activity)
 
-Thank you my great friend Odinei[Odinei Ribeiro](https://github.com/odineiramone) for helping me a lot in this project.
+Thank you my great friend [Odinei Ribeiro](https://github.com/odineiramone) for helping me a lot in this project.
