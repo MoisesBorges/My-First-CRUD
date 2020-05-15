@@ -17,6 +17,6 @@ How to install?
 3. yarn add bootstrap
 4. rails s
 
-Or you can see it on [heroku](https://dashboard.heroku.com/apps/shielded-anchorage-32301/activity)
+Or you can see it on [heroku](https://shielded-anchorage-32301.herokuapp.com/)
 
 Thank you my great friend [Odinei Ribeiro](https://github.com/odineiramone) for helping me a lot in this project.
