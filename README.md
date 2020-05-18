@@ -5,8 +5,11 @@ This is the Crypto Wallet, an app that you can register and keep up with your cr
 Made with
 
 ruby 2.5.0
+
 Rails 5.2.4.2
+
 bootstrap 4.1.1
+
 sqlite3
 
 How to install?
